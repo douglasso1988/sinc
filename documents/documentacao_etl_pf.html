@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.353">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="negocia.cloud">
+
+<title>Documentação do SINC (Sistema Inteligente Negocia.Cloud) para Pessoa Física</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="documentacao_etl_pf_files/libs/clipboard/clipboard.min.js"></script>
+<script src="documentacao_etl_pf_files/libs/quarto-html/quarto.js"></script>
+<script src="documentacao_etl_pf_files/libs/quarto-html/popper.min.js"></script>
+<script src="documentacao_etl_pf_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="documentacao_etl_pf_files/libs/quarto-html/anchor.min.js"></script>
+<link href="documentacao_etl_pf_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="documentacao_etl_pf_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="documentacao_etl_pf_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="documentacao_etl_pf_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="documentacao_etl_pf_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Documentação do SINC (Sistema Inteligente Negocia.Cloud) para Pessoa Física</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>negocia.cloud </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="sobre-a-documentação" class="level2">
+<h2 class="anchored" data-anchor-id="sobre-a-documentação">Sobre a documentação</h2>
+<p>Essa documentação foi elaborada de modo a facilitar o entendimento da equipe técnica quanto ao funcionamento de todo o processo do <strong>Sistema Inteligente Negocia.Cloud</strong> - <em>SINC</em>.</p>
+<p>O <em>SINC</em> foi desenvolvido pensanddo em simplificar o processo de segmentação e cálculo de saúde financeira do cliente/usuário final sem perder a complexidade dos melhores algoritmos de aprendizado de máquina e conceitos estatísticos.</p>
+</section>
+<section id="sobre-o-sinc" class="level2">
+<h2 class="anchored" data-anchor-id="sobre-o-sinc">Sobre o <em>SINC</em></h2>
+<p>O <em>SINC</em> foi desenvolvido em linguagem <em>R</em>, devido à sua versatilidade em manipulação de dados, aplicação de modelos estatísticos e de aprendizagem de máquina.</p>
+<p>Tal sistema garante ao <strong>Negocia.cloud</strong> um diferencial em relação à outras ferramentas de mercado, pois utiliza dos mais modernos e complexos algoritmos e entrega algo simples e de fácil entendimento ao usuário final.</p>
+</section>
+<section id="sobre-os-dados" class="level2">
+<h2 class="anchored" data-anchor-id="sobre-os-dados">Sobre os dados</h2>
+<p>Os dados foram gerados automaticamente pelo site <a href="http://www.fakenamegenerator.com" class="uri">http://www.fakenamegenerator.com</a>. Esses dados foram de extrema importância para o desenvolvimento de todo o <em>SINC</em>.</p>
+</section>
+<section id="bibliotecas-e-configurações-de-ambiente" class="level2">
+<h2 class="anchored" data-anchor-id="bibliotecas-e-configurações-de-ambiente">Bibliotecas e configurações de ambiente</h2>
+<p>No <em>chunk</em> abaixo, temos todas as configurações necessárias (de ambiente no RStudio) e as bibliotecas necessárias para executar o <em>SINC</em>.</p>
+<p>Para garantir um certo padrão na geração dos números aleatórios configuramos um valor fixo à <code>seed</code>.</p>
+<p>Em relação ás bibliotecas, foram utilizadas as seguintes:</p>
+<ul>
+<li><code>tidyverse</code> - é utilizada para facilitar a manipulação dos dados;</li>
+<li><code>openxlsx</code> - é utilizada para ler e manipular arquivos em Excel;</li>
+<li><code>lubridate</code> - biblioteca necessária para manipulação de datas;</li>
+<li><code>jsonlite</code> - essa biblioteca foi necessária para exportar os dados no formato <strong>.json</strong>;</li>
+<li><code>clValid</code> - essa biblioteca foi necessária para validar o melhor método de clusterização.</li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Configurações do ambiente do RStudio</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">scipen =</span> <span class="dv">999</span>, <span class="at">digits =</span> <span class="dv">5</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Configurando uma seed para a geração de números aleatórios</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">1234</span>)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Bibliotecas necessárias para a execução do script</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(openxlsx)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lubridate)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(jsonlite)</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(clValid)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="leitura-dos-dados" class="level2">
+<h2 class="anchored" data-anchor-id="leitura-dos-dados">Leitura dos dados</h2>
+<p>Através da função <code>read.xlsx</code> realizamos a leitura dos dados, que estão no caminho <code>url_path</code> (variável utilizada para armazenar o caminho do arquivo).</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Dados de pessoas físicas gerados aleatóriamente</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co"># FONTE: http://www.fakenamegenerator.com</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>dados_pf <span class="ot">=</span> <span class="fu">read.xlsx</span>(url_path)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Após a leitura dos dados, foram realizados certos tratamentos e manipulações que, apesar de não ser o foco do <em>SINC</em>, foram necessários para chegar à uma estrutura de dados o qual podemos aplicar os algoritmos para classificação dos clientes.</p>
+</section>
+<section id="tratamento-dos-dados" class="level2">
+<h2 class="anchored" data-anchor-id="tratamento-dos-dados">Tratamento dos dados</h2>
+<p>Para alcançarmos a estrutura de dados que o <em>SINC</em> utiliza, realizamos alguns tratamentos (possível de ser observado no <em>chunk</em> abaixo). No final, a estrutura necessária para a tabela <em>sociodemográfica</em> é composta por:</p>
+<ul>
+<li><strong>fiscalDocument</strong>: chave primária que identifica o usuário (no caso o CPF);</li>
+<li><strong>nm_nome</strong>: nome completo do usuário;</li>
+<li><strong>nm_genero</strong>: gênero do usuário;</li>
+<li><strong>dt_nascimento</strong>: data de nascimento do usuário;</li>
+<li><strong>num_idade</strong>: idade do usuário;</li>
+<li><strong>nm_endereco_completo</strong>: endereço completo do usuário;</li>
+<li><strong>nm_email</strong>: e-mail do usuário;</li>
+<li><strong>nm_telefone</strong>: número de telefone do usuário.</li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Tratamento dos dados de PF</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>dados_pf_trat <span class="ot">=</span> dados_pf <span class="sc">%&gt;%</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Selecionanddo aleatóriamente 10% dos dados</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice_sample</span>(<span class="at">prop =</span> <span class="fl">0.1</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Modificando e criando nomas variáveis</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="co"># - Birthday: transformação para o tipo DATE</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  <span class="co"># - num_idade: cálculo da idade do indivíduo</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  <span class="co"># - Gender: tradução do gênero</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Birthday =</span> <span class="fu">as.Date</span>(Birthday, <span class="st">"%m/%d/%Y"</span>),</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>         <span class="at">num_idade =</span> <span class="fu">floor</span>(<span class="fu">as.numeric</span>(<span class="fu">difftime</span>(<span class="fu">Sys.Date</span>(), Birthday))<span class="sc">/</span><span class="dv">365</span>),</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>         <span class="at">Gender =</span> <span class="fu">ifelse</span>(Gender <span class="sc">==</span> <span class="st">"male"</span>, <span class="st">"Masculino"</span>, <span class="st">"Feminino"</span>),</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>         <span class="at">nm_endereco_completo =</span> <span class="fu">paste0</span>(StreetAddress, <span class="st">", "</span>, City, <span class="st">" - "</span>, State, <span class="st">" - "</span>, ZipCode),</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>         <span class="at">nm_nome =</span> <span class="fu">paste</span>(GivenName, MiddleInitial, Surname)) <span class="sc">%&gt;%</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Selecionando as variáveis de interesse e renomeando os mesmos</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="fu">c</span>(<span class="st">"fiscalDocument"</span> <span class="ot">=</span> <span class="st">"NationalID"</span>,</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>           <span class="st">"nm_nome"</span> <span class="ot">=</span> <span class="st">"nm_nome"</span>,</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>           <span class="st">"nm_genero"</span> <span class="ot">=</span> <span class="st">"Gender"</span>,</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>           <span class="st">"dt_nascimento"</span> <span class="ot">=</span> <span class="st">"Birthday"</span>,</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>           <span class="st">"num_idade"</span> <span class="ot">=</span> <span class="st">"num_idade"</span>,</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>           <span class="st">"nm_endereco_completo"</span> <span class="ot">=</span> <span class="st">"nm_endereco_completo"</span>,</span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>           <span class="st">"nm_email"</span> <span class="ot">=</span> <span class="st">"EmailAddress"</span>,</span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>           <span class="st">"nm_telefone"</span> <span class="ot">=</span> <span class="st">"TelephoneNumber"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Após a definição da estrutura de dados, criamos uma imagem de dados transacionais baseado nos CPFs obtidos na tabela de dados criada acima.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Criando a lista de CPFs</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>lista_cpf <span class="ot">=</span> <span class="fu">unique</span>(dados_pf_trat<span class="sc">$</span>fiscalDocument)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Criando a lista de datas</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>lista_datas <span class="ot">=</span> <span class="fu">as.Date</span>(<span class="fu">seq</span>(<span class="at">from =</span> <span class="fu">as.Date</span>(<span class="st">"2010-01-01"</span>), <span class="at">to =</span> <span class="fu">Sys.Date</span>(), <span class="at">by =</span> <span class="st">"month"</span>))</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Criando uma tabela vazia para adicionar os dados transacionais</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>dados_transacionais_pf <span class="ot">=</span> <span class="fu">tibble</span>()</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Contador para o Loop</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>contador <span class="ot">=</span> <span class="dv">1</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Loop para gerar a tabela de</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(cpf <span class="cf">in</span> lista_cpf){</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Visualização da "completude" da geração dos dados transacionais</span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cat</span>(<span class="st">"</span><span class="sc">\f</span><span class="st">"</span>)</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cat</span>(<span class="fu">paste</span>(<span class="dv">100</span><span class="sc">*</span><span class="fu">round</span>(contador<span class="sc">/</span><span class="fu">length</span>(lista_cpf), <span class="dv">4</span>), <span class="st">"%"</span>))</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>  contador <span class="ot">=</span> contador <span class="sc">+</span> <span class="dv">1</span></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Gerando um número de "repetiçoes" aleatória</span></span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>  num_rep <span class="ot">=</span> <span class="fu">round</span>(<span class="fu">runif</span>(<span class="at">n =</span> <span class="dv">1</span>, <span class="at">min =</span> <span class="dv">1</span>, <span class="at">max =</span> <span class="fu">length</span>(lista_datas)), <span class="dv">0</span>)</span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Gerando as listas auxiliares</span></span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>  lista_aux_cpf <span class="ot">=</span> <span class="fu">rep</span>(cpf, num_rep)</span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>  lista_aux_datas <span class="ot">=</span> <span class="fu">sort</span>(<span class="fu">sample</span>(<span class="at">x =</span> lista_datas, <span class="at">size =</span> num_rep))</span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>  lista_aux_valor <span class="ot">=</span> <span class="fu">round</span>(<span class="fu">runif</span>(<span class="at">n =</span> num_rep, <span class="at">min =</span> <span class="dv">100</span>, <span class="at">max =</span> <span class="dv">600</span>), <span class="dv">2</span>)</span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>  lista_aux_status_cobranca <span class="ot">=</span> <span class="fu">sample</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="st">"PAGO"</span>, <span class="st">"NÃO PAGO"</span>), <span class="at">size =</span> num_rep, <span class="at">prob =</span> <span class="fu">c</span>(<span class="fl">0.8</span>, <span class="fl">0.2</span>), <span class="at">replace =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Criando tabela auxiliar baseaddo nas listas acima</span></span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a>  tbl_aux <span class="ot">=</span> <span class="fu">tibble</span>(<span class="at">fiscalDocument =</span> lista_aux_cpf,</span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>                   <span class="at">dt_transacao =</span> lista_aux_datas,</span>
+<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a>                   <span class="at">num_valor_cobranca =</span> lista_aux_valor,</span>
+<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a>                   <span class="at">nm_status_cobranca =</span> lista_aux_status_cobranca)</span>
+<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Concatenando a tabela auxiliar com a tabela transacional completa</span></span>
+<span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a>  dados_transacionais_pf <span class="ot">=</span> <span class="fu">bind_rows</span>(dados_transacionais_pf, tbl_aux)</span>
+<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a>} <span class="co"># Fim do "for"</span></span>
+<span id="cb4-37"><a href="#cb4-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-38"><a href="#cb4-38" aria-hidden="true" tabindex="-1"></a><span class="co"># Criando o id_transacao</span></span>
+<span id="cb4-39"><a href="#cb4-39" aria-hidden="true" tabindex="-1"></a>dados_transacionais_pf <span class="ot">=</span> dados_transacionais_pf <span class="sc">%&gt;%</span></span>
+<span id="cb4-40"><a href="#cb4-40" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rownames_to_column</span>(<span class="at">var =</span> <span class="st">"id_transacao"</span>)</span>
+<span id="cb4-41"><a href="#cb4-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-42"><a href="#cb4-42" aria-hidden="true" tabindex="-1"></a><span class="co"># Limpando a memória</span></span>
+<span id="cb4-43"><a href="#cb4-43" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(tbl_aux, contador, lista_cpf, lista_datas, lista_aux_cpf, lista_aux_datas, lista_aux_valor, lista_aux_status_cobranca, num_rep, cpf)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>O <em>chunk</em> de código acima, traz um modelo de dados transacionais <strong>mínimo</strong> para que o <em>SINC</em> possa ser executado com sucesso.</p>
+<p>Nos dados transacionais acima, as seguintes colunas foram consideradas:</p>
+<ul>
+<li><strong>id_transacao</strong>: chave primária que identifica uma determinada transação;</li>
+<li><strong>fiscalDocument</strong>: chave secundária que identifica o usuário (no caso o CPF);</li>
+<li><strong>dt_transacao</strong>: data em que a transação foi gerada;</li>
+<li><strong>num_valor_cobranca</strong>: valor da transação;</li>
+<li><strong>nm_status_cobranca</strong>: status da transação.</li>
+</ul>
+<p>Como podemos observar, o <em>SINC</em> não exige alta complexidade nos dados para utilizar o melhor dos algoritmos de inteligência artificial.</p>
+</section>
+<section id="cálculo-do-score-sinc" class="level2">
+<h2 class="anchored" data-anchor-id="cálculo-do-score-sinc">Cálculo do SCORE <em>SINC</em></h2>
+<p>O <strong>SCORE</strong> <strong><em>SINC</em></strong> é um dos indicadores que o sistema gera de valor para o usuário final. Tal índice varia entre <span class="math inline">\(0\)</span> e <span class="math inline">\(1\)</span>, sendo que <span class="math inline">\(0\)</span> é considerado como um <em>score</em> crítico e <span class="math inline">\(1\)</span> um <em>score</em> de excelência.</p>
+<p>Para o início do cálculo do <strong>SCORE</strong> <strong><em>SINC</em></strong>, se faz necessário a sumarização dos dados transacionais. Nesse processo de sumarização, foram calculados alguns índices que suportarão a segmentação de nossos clientes - condição essa essencial para o cálculo do <em>score</em>.</p>
+<p>Os índices calculados foram:</p>
+<ul>
+<li><strong>num_transacoes</strong>: total de transações que o cliente possui com a empresa;</li>
+<li><strong>num_transacoes_paga</strong>: total de transações pagas pelo cliente;</li>
+<li><strong>num_valor_pago</strong>: valor total pago referente às transações pagas;</li>
+<li><strong>num_transacoes_nao_paga</strong>: total de transações não pagas pelo cliente;</li>
+<li><strong>num_valor_nao_pago</strong>: valor total não pago referente às transações não pagas.</li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Sumarização dos dados transacionais</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>dados_score <span class="ot">=</span> dados_transacionais_pf <span class="sc">%&gt;%</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Agrupamento por CPF</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(fiscalDocument) <span class="sc">%&gt;%</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Cálculos:</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="co"># - num_transacoes: total de transações que o cliente possui</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  <span class="co"># - num_transacoes_paga: total de transações pagas que o cliente possui</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>  <span class="co"># - num_valor_pago: total pago pelo cliente</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>  <span class="co"># - num_transacoes_nao_paga: total de transações não pagas que o cliente possui</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>  <span class="co"># - num_valor_nao_pago: total não pago pelo cliente</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">num_transacoes =</span> <span class="fu">n</span>(),</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>            <span class="at">num_transacoes_paga =</span> <span class="fu">sum</span>(<span class="fu">ifelse</span>(nm_status_cobranca <span class="sc">==</span> <span class="st">"PAGO"</span>, <span class="dv">1</span>, <span class="dv">0</span>)),</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>            <span class="at">num_valor_pago =</span> <span class="fu">sum</span>(<span class="fu">ifelse</span>(nm_status_cobranca <span class="sc">==</span> <span class="st">"PAGO"</span>, num_valor_cobranca, <span class="dv">0</span>)),</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>            <span class="at">num_transacoes_nao_paga =</span> <span class="fu">sum</span>(<span class="fu">ifelse</span>(nm_status_cobranca <span class="sc">==</span> <span class="st">"NÃO PAGO"</span>, <span class="dv">1</span>, <span class="dv">0</span>)),</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>            <span class="at">num_valor_nao_pago =</span> <span class="fu">sum</span>(<span class="fu">ifelse</span>(nm_status_cobranca <span class="sc">==</span> <span class="st">"NÃO PAGO"</span>, num_valor_cobranca, <span class="dv">0</span>))) <span class="sc">%&gt;%</span></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Padronizamos (pelo método min-max) cada um dos índices criados anteriormente</span></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">num_pontos_transacoes =</span> (num_transacoes <span class="sc">-</span> <span class="fu">min</span>(num_transacoes))<span class="sc">/</span>(<span class="fu">max</span>(num_transacoes) <span class="sc">-</span> <span class="fu">min</span>(num_transacoes)),</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>         <span class="at">num_pontos_transacoes_paga =</span> (num_transacoes_paga <span class="sc">-</span> <span class="fu">min</span>(num_transacoes_paga))<span class="sc">/</span>(<span class="fu">max</span>(num_transacoes_paga) <span class="sc">-</span> <span class="fu">min</span>(num_transacoes_paga)),</span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>         <span class="at">num_pontos_valor_pago =</span> (num_valor_pago <span class="sc">-</span> <span class="fu">min</span>(num_valor_pago))<span class="sc">/</span>(<span class="fu">max</span>(num_valor_pago) <span class="sc">-</span> <span class="fu">min</span>(num_valor_pago)),</span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>         <span class="at">num_pontos_transacoes_nao_paga =</span> (<span class="fu">max</span>(num_transacoes_nao_paga) <span class="sc">-</span> num_transacoes_nao_paga)<span class="sc">/</span>(<span class="fu">max</span>(num_transacoes_nao_paga) <span class="sc">-</span> <span class="fu">min</span>(num_transacoes_nao_paga)),</span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>         <span class="at">num_pontos_valor_nao_pago =</span> (<span class="fu">max</span>(num_valor_nao_pago) <span class="sc">-</span> num_valor_nao_pago)<span class="sc">/</span>(<span class="fu">max</span>(num_valor_nao_pago) <span class="sc">-</span> <span class="fu">min</span>(num_valor_nao_pago)),</span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>         <span class="at">num_pontos_totais =</span> num_pontos_transacoes <span class="sc">+</span> num_pontos_transacoes_paga <span class="sc">+</span> num_pontos_valor_pago <span class="sc">+</span> num_pontos_transacoes_nao_paga <span class="sc">+</span> num_pontos_valor_nao_pago,</span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>         <span class="at">num_score =</span> (num_pontos_totais <span class="sc">-</span> <span class="fu">min</span>(num_pontos_totais))<span class="sc">/</span>(<span class="fu">max</span>(num_pontos_totais) <span class="sc">-</span> <span class="fu">min</span>(num_pontos_totais)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Os índices calculados acima são apenas um exemplo de como o <em>SINC</em> trabalha. Outros índices como o <strong>LTV</strong> (<em>Life Time Value</em>), <strong>Tempo de fidelidade</strong>, entre outros, podem ser parametrizados pelo usuário de modo que o <em>SINC</em> realizará o cálculo.</p>
+<p>Para cada índice calculado, padronizamos através d</p>
+<ul>
+<li><strong>num_pontos_transacoes</strong>: padronização pelo método <em>min-max</em> do total de transações que o cliente possui com a empresa;</li>
+<li><strong>num_pontos_transacoes_paga</strong>: padronização pelo método <em>min-max</em> do total de transações pagas pelo cliente;</li>
+<li><strong>num_pontos_valor_pago</strong>: padronização pelo método <em>min-max</em> do valor total pago referente às transações pagas;</li>
+<li><strong>num_pontos_transacoes_nao_paga</strong>: padronização pelo método <em>min-max</em> do total de transações não pagas pelo cliente;</li>
+<li><strong>num_pontos_valor_nao_pago</strong>: padronização pelo método <em>min-max</em> do valor total não pago referente às transações não pagas;</li>
+<li><strong>num_pontos_totais</strong>: soma de todas as pontuações padronizadas anteriormente;</li>
+<li><strong>num_score</strong>: padronização pelo método <em>min-max</em> da pontuação total.</li>
+</ul>
+<p>Além de serem necessários para o cálculo do <em>score</em>, os índices padronizados são utilizados para a segmentação da carteira e cálculo de outros índices que contribuem para o cálculo de desconto sugerido pelo nosso sistema.</p>
+</section>
+<section id="modelo-ótimo-de-cluster" class="level2">
+<h2 class="anchored" data-anchor-id="modelo-ótimo-de-cluster">Modelo ótimo de <em>cluster</em></h2>
+<p>Nosso sistema é capaz de definir o melhor algoritmo de clusterização dentre os definidos no <em>SINC</em> (<em>hierarchical</em>, <span class="math inline">\(k\)</span><em>-means</em>, <span class="math inline">\(k\)</span><em>-modes</em>, <span class="math inline">\(k\)</span><em>-prototypes</em>, <em>dbscan</em>, <em>pca</em>, <em>pam</em> e <em>mca</em>) e o tamanho ótimo desses clusters.</p>
+<p>No exemplo abaixo, aplicamos a função <code>clValid</code> para simular qual qual o melhor algoritmo entre <em>hierarchical</em> e <span class="math inline">\(k\)</span><em>-means</em> e o tamanho ótimo dos clusters.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Criando a imagem de dados que será utilizada na clusterização</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>dados_cluster <span class="ot">=</span> dados_score <span class="sc">%&gt;%</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">column_to_rownames</span>(<span class="st">"fiscalDocument"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="fu">c</span>(<span class="st">"num_pontos_transacoes"</span>,<span class="st">"num_pontos_transacoes_paga"</span>,<span class="st">"num_pontos_valor_pago"</span>,<span class="st">"num_pontos_transacoes_nao_paga"</span>,<span class="st">"num_pontos_valor_nao_pago"</span>))</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Algoritmo para validar e identificar o melhor método de aprendizado não supervisionado e o tamanho ótimo de clusters</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>validacao_cluster <span class="ot">=</span> <span class="fu">clValid</span>(dados_cluster,</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>                            <span class="at">nClust =</span> <span class="dv">2</span><span class="sc">:</span><span class="dv">10</span>,</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>                            <span class="at">clMethods =</span> <span class="fu">c</span>(<span class="st">"hierarchical"</span>,<span class="st">"kmeans"</span>),</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>                            <span class="at">validation =</span> <span class="st">"internal"</span>,</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>                            <span class="at">maxitems =</span> <span class="fu">nrow</span>(dados_cluster))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Com os resultados obtidos por esse método, nosso sistema consegue selecionar o melhor algoritmo de clusterização e o tamanho ótimo de clusters necessários a ponto de garantirmos a maior homogeneidade intra grupos e maior heterogeneidade entre grupos.</p>
+<p>Outros métodos de validação também estarão disponíveis em nossos sistema.</p>
+</section>
+<section id="taxa-de-desconto-sinc" class="level2">
+<h2 class="anchored" data-anchor-id="taxa-de-desconto-sinc">Taxa de desconto <em>SINC</em></h2>
+<p>Conforme apresentamos, o <em>SINC</em> realiza diversos cálculos e utiliza dos mais modernos e eficazes algoritmos de inteligência artificial, de modo a simplificar a negociação entre as partes. Todos as <em>features</em> disponíveis, podem contribuir individualmente para que o usuário defina uma proposta de negociação.</p>
+<p>Mas o <em>SINC</em> vai além! Com todos os cálculos disponíveis, oferecemos aos nossos usuários uma <strong>taxa de desconto</strong> que vai ser calculada a partir do <em>Score SINC</em> e do cluster o qual o cliente que receberá a proposta de negociação pertence.</p>
+<p>Apesar de o <em>SINC</em> propor uma taxa de desconto baseada nos resultados calculados/preditos, o usuário tem a total liberdade para configurar a taxa de desconto.</p>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
